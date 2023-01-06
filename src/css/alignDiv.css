@@ -1,0 +1,89 @@
+/*
+<body>
+  <div class="wrapper">
+    <div class="div"></div>
+  </div>
+</body>
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    margin: 30px auto 0;
+    width: 600px;
+    height: 400px;
+    border: 1px solid #00f;
+}
+.div {
+    width: 100px;
+    height: 50px;
+    background: #f00;
+}
+/* #1.1 Absolute */
+.wrapper {
+    position: relative;
+}
+.div {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 25px);
+}
+/* #1.2 Absolute */
+.wrapper {
+    position: relative;
+}
+.div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/* #2 Table */
+.wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.div {
+    display: inline-block;
+}
+/* #3 Line height */
+.wrapper {
+    line-height: 400px;
+    text-align: center;
+}
+.div {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* #4 Pseudo element */
+.wrapper {
+    text-align: center;
+}
+.wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.div {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* #5.1 Flexbox */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #5.2 Flexbox */
+.wrapper {
+    display: flex;
+}
+.div {
+    margin: auto;
+}
